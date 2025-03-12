@@ -57,7 +57,7 @@ El proyecto busca automatizar la extracción y el análisis de secuencias genóm
 
 -   **Portabilidad y Usabilidad:**
     
-    -   Compatible con sistemas Unix/Linux.
+    -   Compatible con sistemas Unix/Linux y Windows.
     -   El sistema debe ser ejecutable desde la línea de comandos.
     -   Todos los datos de entrada a los programas deben pasarse via argumentos.
     -   Si se implementa código debe usarse python o scripts shell.
@@ -116,6 +116,13 @@ Este archivo contiene información crucial sobre las regiones de unión de los 1
     
     -   _Descripción:_ Denota la ubicación genómica del pico central, como intergénica, intrónica, etc.
     -   _Ejemplo:_ "intergénica", "intrónica", etc.
+
+
+    Responde:
+
+¿Faltó algún requisito importante? En los requisitos no funcionales agregué que también debe el script ser compatible con sistemas Windows.
+
+¿Algún requisito necesita ser modificado o aclarado? Creo que por el momento no, todo está claro
 
 
 ## Análisis y Diseño
