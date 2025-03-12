@@ -56,6 +56,7 @@ fasta_peaks/
 ```
 
 4. ** Caso: El archivo log.out del inciso anterior esté vacío **
+
 	**Entradas:**
 	- El archivo **log.out** que contiene los peaks que están fuera del genoma esté vacío, pero sí se haya generado el archivo y aparezca 
 
@@ -63,6 +64,7 @@ fasta_peaks/
 	- Poder hacer una función que cheque si el archivo fue hecho correctamente y si no es así, que lo genere de nuevo
 
 5. ** Caso: Archivo de genoma vacío **
+
 	**Entradas:**
 	- Archivo del genoma está vacío aunque sí se encuentre el archivo en una dirección existente
 
@@ -70,9 +72,10 @@ fasta_peaks/
 	- El sistema debe imprimir un error que diga:  `"Warning: This file is empty. Try with another file"`
 
 6. ** Caso: No haya peak start ni peak end**
+
 	**Entradas:**
 	- Archivo de genoma válido
 	- Archivo de picos no tiene posiciones de `Peak_start` y `Peak_end` en ninguna parte del genoma
-
-**Esperado:**
+    
+    **Esperado:**
 	- El sistema debe imprimir un error que diga:  `"Peak start and peak end does not exist in this file "`
