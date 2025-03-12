@@ -1,10 +1,11 @@
 # Proyecto de Automatización para la Identificación de Sitios de Unión de Factores de Transcripción en E. coli en experimentos de ChIP-Seq
 
-Fecha: [dd/mm/yyyy]
+Fecha: 11 de marzo de 2025
 
 Participantes: 
 
-- [nombre]  <email: > 
+- Jana Noemí Azamar Ramírez  
+  jazamar@lcg.unam.mx
 
 ## Descripción del Problema
 <!-- Puedes empezar con una introducción, luego la justificación y plantear el problema. -->
