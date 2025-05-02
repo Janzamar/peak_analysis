@@ -59,21 +59,36 @@ def guardar_fasta_por_tf(secuencias_por_tf, output_dir):
                 archivo.write(f"{header}\n{secuencia}\n")  # Escribimos el encabezado y la secuencia en el archivo FASTA
 
 # Función principal
+from pathlib import Path  # Así podemos usar e importar los Paths con ayuda de pathlib
+
 def main():
     """Principal que orquesta la ejecución del script."""
-    # Pedimos al usuario que introduzca las rutas de los archivos 
     fasta_path = input("Introduce el nombre del archivo FASTA que vayas a utilizar: ")
     peaks_path = input("Introduce el nombre del archivo de picos que vayas a utilizar: ")
     output_dir = "C:\\Users\\asus\\OneDrive\\Documents\\AAAEstudiar LCG\\peak_analysis\\bin\\Extra_seq_fasta\\archivos de salida"
 
-    # Usamos las funciones definidas para cargar el genoma y los peaks
-    genoma = cargar_genoma(fasta_path)
-    peaks_data = leer_achivo_picos(peaks_path)
-    secuencias_extraidas = extraer_secuencias(peaks_data, genoma)
+    # Así validamos si los archivos existen usando pathlib 
+    if not Path(fasta_path).is_file(): # si no existe el archivo del path
+        print(f"Error: El archivo FASTA '{fasta_path}' no existe.")  # si no existe el archivo, imprimimos esto
+        return
 
-    # Guardamos las secuencias extraídas en archivos FASTA separados por TF_name
-    guardar_fasta_por_tf(secuencias_extraidas, output_dir)
+    if not Path(peaks_path).is_file(): # si no existe el archivo del path
+        print(f"Error: El archivo de picos '{peaks_path}' no existe.") # si no existe el archivo, imprimimos esto
+        return
 
-# Así jecutamos la función principal 
+    try # uso el try para evitar que se ejecute todo el código si no existen los archivos con los cuales trabajar, si existe, se ejecuta lo siguiente
+        # Usamos las funciones definidas para cargar el genoma y los peaks
+        genoma = cargar_genoma(fasta_path)
+        peaks_data = leer_achivo_picos(peaks_path)
+        secuencias_extraidas = extraer_secuencias(peaks_data, genoma)
+
+        # Guardamos las secuencias extraídas en archivos FASTA separados por TF_name
+        guardar_fasta_por_tf(secuencias_extraidas, output_dir)
+        print("Secuencias extraídas y guardadas correctamente.")
+    except Exception as e:  # si los archivos no existen, se imprime a pantalla esto
+        print(f"Ocurrió un error durante la ejecución: {e}") # la e significa excepción
+
+
+
 if __name__ == "__main__":
     main()
