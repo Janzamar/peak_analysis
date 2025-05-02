@@ -26,7 +26,8 @@ def leer_achivo_picos(peak_path):
              peak_end = float(columnas[3]) # extraemos coordenadas que se encuentran en la columna 3
              # se crea diccionario con .append, para que se ordene todo en la lista con la info que ya extrajimos
              peaks.append({"TF_name: ": TF_name, "Peak_start: ": peak_start, "Peak_end: ": peak_end})
-        return peaks; # se regresaría la lista  
+             
+             return peaks; # se regresaría la lista  
 
 # Función para obtener los tf_names y ponerlos en un diccionario
 def extraer_secuencias(peak_data, genoma):
