@@ -26,14 +26,27 @@ def leer_achivo_picos(peak_path):
              peak_end = float(columnas[3]) # extraemos coordenadas que se encuentran en la columna 3
              # se crea diccionario con .append, para que se ordene todo en la lista con la info que ya extrajimos
              peaks.append({"TF_name: ": TF_name, "Peak_start: ": peak_start, "Peak_end: ": peak_end})
-        return peaks; # se regresaría el diccionario  
+        return peaks; # se regresaría la lista  
 
-
+# Función para obtener los tf_names y ponerlos en un diccionario
 def extraer_secuencias(peak_data, genoma):
     """Agrupa las secuencias extraídas por TF_name en un diccionario."""
+    secuencias_por_tf_name = {} # creación de diccionario donde estarán los peak start y end y el nombre
+    for peak in peak_data:
+        tf = peak["TF_name"]
+        start = peak["Peak_start"]
+        end = peak["Peak_end"]
+        
+        # Variable para guardar la secuencia del genoma
+        secuencia = genoma[start:end] # así solo obtenemos la secuencia donde está el peak del inicio y del final según las coordenadas que ya tenemos 
 
+        return secuencias_por_tf_name
 
+#función para hacer un archivo fasta para cada tf_name
 def guardar_fasta_por_tf(secuencias_por_tf, output_dir):
     ""Guardar archivos FASTA separados por cada TF_name."" 
+
+
+
 
 ""Principal que orquesta la ejecución del script.""
