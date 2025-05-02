@@ -43,10 +43,10 @@ def extraer_secuencias(peak_data, genoma):
         return secuencias_por_tf_name
 
 #función para hacer un archivo fasta para cada tf_name
-def guardar_fasta_por_tf(secuencias_por_tf, output_dir):
-    ""Guardar archivos FASTA separados por cada TF_name."" 
+#def guardar_fasta_por_tf(secuencias_por_tf, output_dir):
+ #   ""Guardar archivos FASTA separados por cada TF_name."" 
 
 
 
 
-""Principal que orquesta la ejecución del script.""
+#""Principal que orquesta la ejecución del script.""
