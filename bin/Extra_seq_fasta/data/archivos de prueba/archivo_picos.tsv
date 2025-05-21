@@ -1,0 +1,15 @@
+ 	 Dataset_Ids                      	 TF_name	 Peak_start	 Peak_end 	 Peak_center	 Peak_number	 Max_Fold_Enrichment	 Max_Norm_Fold_Enrichment	 Proximal_genes          	 Center_position_type
+0	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  3389342.0	 3389658.0	   3389500.0	           1	               68.21	                 1.0     	 aaeR,tldD               	 intergenic
+1	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  2406963.0	 2407345.0	   2407192.0	           2	               59.48	                 1.0     	 alaA,lrhA               	 intergenic
+2	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  2985455.0	 2985799.0	   2985636.0	           3	               51.0 	                 0.861014	 yqeF,yqeG               	 intergenic
+3	 aaeR inducible 1,aaeR inducible 2	 aaeR   	    52313.0	   52557.0	     52425.0	           4	               42.0 	                 0.956533	 apaH-apaG,apaH-apaG-rsmA	 genic
+4	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  4259119.0	 4259374.0	   4259257.0	           5	               30.19	                 0.559163	 yjbJ,zur                	 genic
+5	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  3004839.0	 3005276.0	   3005010.0	           6	               23.55	                 0.785618	 xdhA-xdhB-xdhC,ygeV     	 genic
+6	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  1894592.0	 1894880.0	   1894740.0	           7	               22.16	                 0.858063	 pabB-nudL,yoaH          	 intergenic
+7	 aaeR inducible 1,aaeR inducible 2	 aaeR   	  4360717.0	 4361004.0	   4360857.0	           8	               22.04	                 0.707808	 cadA-cadB,cadC          	 genic
+69	agaR inducible 1,agaR native 1	agaR	3277867.0	3280579.0	3278846.0	1	3626.5	1.0	agaR,kbaZ-agaV-agaW-agaA	intergenic
+70	agaR inducible 1,agaR native 1	agaR	3280889.0	3282684.0	3281889.0	2	2987.05	0.907183	agaS-kbaY-agaB-agaC-agaD-agaI,kbaZ-agaV-agaW-agaA	intergenic
+71	agaR inducible 1,agaR native 1	agaR	1636062.0	1636856.0	1636463.0	3	42.16	0.147574	pinQ,tfaQ-stfQ-nohQ	intergenic
+72	agaR inducible 1,agaR native 1	agaR	580354.0	581179.0	580751.0	4	38.13	0.12025	nohD,ylcI	intergenic
+73	agaR inducible 1,agaR native 1	agaR	3098610.0	3099482.0	3099086.0	5	37.96	0.058667	rdgB-yggW,yggM	genic
+74	agaR inducible 1,agaR native 1	agaR	3151723.0	3152469.0	3152103.0	6	21.42	0.060511	metC,metC-yghB	intergenic
