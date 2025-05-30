@@ -30,6 +30,7 @@ Estos tres puntos son requeridos para ejecutar _main.py_.
 
 ## Estructura del proyecto
 
+``
 Peak_analysis                                                                       
 ├───bin
 │   └───Extra_seq_fasta
@@ -43,7 +44,7 @@ Peak_analysis
 │       │   │   E_coli_K12_MG1655_U00096.3.txt
 │       │   │   union_peaks_file.tsv
 │       │   │
-│       │   ├───archivos de prueba
+│       │   ├───archivos de prueba # literalmente son archivos únicamente de prueba
 │       │   │       archivo_picos.tsv
 │       │   │       geno_ecoli.fa
 │       │   │
@@ -73,3 +74,4 @@ Peak_analysis
 │
 └───src
         .gitkeep
+``
