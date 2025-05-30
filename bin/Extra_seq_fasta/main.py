@@ -1,3 +1,6 @@
+import argparse
+import sys
+import os
 from genome import cargar_genoma
 from io_utils import extraer_secuencias, guardar_fasta_por_tf
 from peaks import leer_achivo_peak
@@ -5,9 +8,37 @@ from peaks import leer_achivo_peak
 
 def main():
     """Principal que orquesta la ejecución del script."""
-    fasta_path = ("E_coli_K12_MG1655_U00096.3.txt") #mod1
-    peaks_path = ("union_peaks_file.tsv") #mod2
-    output_dir = input("Ingresa la Ruta absoluta de la carpeta donde quieres tus outputs: ")
+    parser = argparse.ArgumentParser(description="Extrae secuencias desde un genoma y archivo de peaks, y guarda por TF.")
+    
+    parser.add_argument('-f', '--fasta', required=True, help='Ruta al archivo FASTA del genoma')
+    parser.add_argument('-p', '--peaks', required=True, help='Ruta al archivo TSV de peaks')
+    parser.add_argument('-o', '--output', required=True, help='Ruta a la carpeta de salida')
+    
+    args = parser.parse_args()
+
+    # Usamos argumentos en lugar de input() como anteriormente se hacía
+    fasta_path = args.fasta
+    peaks_path = args.peaks
+    output_dir = args.output
+
+      # Verificamos que el archivo FASTA exista
+    if not os.path.isfile(fasta_path):
+        print(f"Error: El archivo FASTA '{fasta_path}' no existe.")
+        sys.exit(1)  # Salir con código 1 para indicar error
+
+    # Verificamos que el archivo de peaks exista
+    if not os.path.isfile(peaks_path):
+        print(f"Error: El archivo de peaks '{peaks_path}' no existe.")
+        sys.exit(1)
+
+    # Verificarmos que la carpeta de salida exista, si no, crearla
+    if not os.path.isdir(output_dir):
+        print(f"La carpeta de salida '{output_dir}' no existe. En creación...")
+        try:
+            os.makedirs(output_dir) # esta linea crea la carpeta si es que la solicitamos no existe
+        except Exception as e:
+            print(f"No se pudo crear la carpeta de salida: {e}")
+            sys.exit(1)
 
 
     try: # uso el try para evitar que se ejecute todo el código si no existen los archivos con los cuales trabajar, si existe, se ejecuta lo siguiente
