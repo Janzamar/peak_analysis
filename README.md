@@ -30,7 +30,7 @@ Estos tres puntos son requeridos para ejecutar _main.py_.
 
 ## Estructura del proyecto
 
-``
+```
 Peak_analysis                                                                       
 ├───bin
 │   └───Extra_seq_fasta
@@ -74,4 +74,4 @@ Peak_analysis
 │
 └───src
         .gitkeep
-``
+```
