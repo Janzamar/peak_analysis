@@ -188,6 +188,8 @@ Este archivo contiene información crucial sobre las regiones de unión de los 1
         - Guardan con cada TF_name las secuencias delimitadas por los peaks_start y los peaks_ends
 
 La arquitectura de los códigos es la siguiente:
+
+```
 C:.
 ├───bin
 │   └───Extra_seq_fasta
@@ -201,3 +203,4 @@ C:.
 ├───doc
 ├───results
 └───src
+```
