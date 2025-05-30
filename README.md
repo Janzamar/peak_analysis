@@ -18,6 +18,7 @@ Usar el siguiente comando en la terminal CMD git para clonar el repositorio y ab
 `` python main.py -f formato.fasta -p peaks_file.tsv -o output_dir``
 
 Glosario:
+
 "- f": Ruta de acceso al archivo FASTA 
 
 "-p": Ruta de acceso al archivo de peaks
