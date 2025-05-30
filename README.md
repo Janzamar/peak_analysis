@@ -19,8 +19,11 @@ Usar el siguiente comando en la terminal CMD git para clonar el repositorio y ab
 
 Glosario:
 "- f": Ruta de acceso al archivo FASTA 
+
 "-p": Ruta de acceso al archivo de peaks
+
 "-o": Ruta del directorio donde se guardarán los archivos FASTA extraídos
+
 
 Estos tres puntos son requeridos para ejecutar _main.py_.
 
@@ -69,4 +72,3 @@ Peak_analysis
 │
 └───src
         .gitkeep
-        extract_fasta_scr_prueba.py
